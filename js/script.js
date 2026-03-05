@@ -1,5 +1,17 @@
 // ── App data ──────────────────────────────────────────────
 const apps = {
+    conversorCulinario: {
+        icon: '🍽️', iconBg: '#fff5e6', category: 'Utilitário',
+        name: 'Conversor Culinário', tagline: 'Converta facilmente entre diferentes unidades de medida de ingredientes.',
+        about: 'O Conversor Culinário é um utilitário criado para ajudar chefs e entusiastas da culinária a converter entre diferentes unidades de medida de ingredientes. O app é simples e intuitivo, com uma interface amigável que permite ao usuário inserir o valor e a unidade de medida de um ingrediente, e obter o valor convertido para outra unidade.',
+        features: '— Criação de planos de treino personalizados\n— Integração bidirecional com HealthKit\n— Gráficos de evolução semanal e mensal\n— Registro de séries, repetições e carga\n— Notificações inteligentes de descanso',
+        challenges: 'O maior desafio foi sincronizar os dados em tempo real com o HealthKit sem impactar a performance da UI, utilizando Combine para gerenciar fluxos assíncronos de forma reativa.',
+        techs: ['Swift', 'SwiftUI', 'HealthKit', 'CoreData', 'Combine', 'Charts'],
+        links: [
+            { icon: '🛍️', label: 'App Store', url: '#' },
+            { icon: '🍽️', label: 'Página do Aplicativo', url: 'https://luizgustavo358.github.io/conversorculinario/' }
+        ]
+    },
     fittrack: {
         icon: '🏋️', iconBg: '#f0f5ff', category: 'Saúde & Fitness',
         name: 'FitTrack', tagline: 'Rastreamento inteligente de treinos com planos personalizados e integração nativa com o HealthKit.',
