@@ -1,9 +1,408 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
     <head>
-        <title>My Site</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Luiz Bragança — iOS Developer</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
     </head>
+
     <body>
-        <h1>This is my GitHub Pages website!</h1>
+
+        <!-- NAV -->
+        <nav>
+            <div class="nav-logo" onclick="goHome()">2lu<em>.dev</em></div>
+            <ul class="nav-links">
+                <li><a onclick="setTimeout(()=>scrollToId('apps'),400)">Apps</a></li>
+                <li><a onclick="setTimeout(()=>scrollToId('skills'),400)">Skills</a></li>
+                <li><a onclick="setTimeout(()=>scrollToId('contact'),400)">Contato</a></li>
+                <li><a onclick="setTimeout(()=>scrollToId('contact'),400)" class="nav-cta">Contratar</a></li>
+                <li style="display:flex; align-items:center; gap:0.55rem;">
+                    <span id="themeIcon">🌙</span>
+                    <button id="themeToggle" onclick="toggleTheme()" aria-label="Alternar tema" role="switch">
+                        <span id="iosThumb"></span>
+                    </button>
+                    <span id="themeLabel">Dark</span>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- ========== HOME PAGE ========== -->
+        <div id="page-home" class="page active">
+
+            <div class="hero-wrap">
+                <div class="hero">
+                    <div class="hero-left">
+                        <div class="hero-badge"><span class="badge-dot"></span>Disponível para novos projetos</div>
+                        <h1 class="hero-name">Luiz Gustavo<br><span class="line2">Bragança dos Santos.</span></h1>
+                        <p class="hero-role">iOS Developer — Swift & SwiftUI<br>Criando experiências nativas
+                            memoráveis<br>para iPhone & iPad</p>
+                        <div class="hero-actions">
+                            <a class="btn-primary" onclick="scrollToId('apps')">Ver Projetos →</a>
+                            <a class="btn-ghost" onclick="scrollToId('contact')">Entre em Contato</a>
+                        </div>
+                    </div>
+                    <div class="hero-right">
+                        <div class="photo-deco"></div>
+                        <div class="photo-deco2"></div>
+                        <div class="photo-frame">
+                            <img id="photoImg" src="./src/photo.jpeg" alt="Foto de perfil">
+                        </div>
+                        <div class="photo-tag">
+                            <div class="photo-tag-name">Luiz Bragança</div>
+                            <div class="photo-tag-sub">iOS Developer · Swift</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="border-top:1px solid var(--border);">
+                <div class="divider-bar">
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <div class="stat-num">1</div>
+                            <div class="stat-lbl">App Publicado</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">1+</div>
+                            <div class="stat-lbl">Anos de Exp.</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">Swift</div>
+                            <div class="stat-lbl">Linguagem</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">iOS 16+</div>
+                            <div class="stat-lbl">Target</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section id="apps">
+                <div class="container">
+                    <div class="reveal">
+                        <p class="section-pre">01 — Portfólio</p>
+                        <h2 class="section-title">Apps desenvolvidos</h2>
+                        <p class="section-sub">Projetos com foco em performance, design nativo e experiência do usuário.</p>
+                    </div>
+                    <div class="apps-grid">
+
+                        <div class="app-card reveal">
+                            <div class="app-top top-blue">🏋️</div>
+                            <div class="app-body">
+                                <span class="app-tag">Saúde</span>
+                                <div class="app-name">FitTrack</div>
+                                <p class="app-desc">Rastreamento de treinos com planos personalizados e integração com
+                                    HealthKit.</p>
+                                <div class="app-techs">
+                                    <span class="tech">Swift</span><span class="tech">SwiftUI</span>
+                                    <span class="tech">HealthKit</span><span class="tech">CoreData</span>
+                                </div>
+                            </div>
+                            <div class="app-card-footer">
+                                <button class="btn-detail" onclick="openDetail('fittrack')">
+                                    Ver detalhes
+                                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="app-card reveal">
+                            <div class="app-top top-violet">💸</div>
+                            <div class="app-body">
+                                <span class="app-tag">Finanças</span>
+                                <div class="app-name">Carteira Pro</div>
+                                <p class="app-desc">Gestão financeira com dashboards interativos, categorização automática e
+                                    metas.</p>
+                                <div class="app-techs">
+                                    <span class="tech">Swift</span><span class="tech">Charts</span>
+                                    <span class="tech">CloudKit</span>
+                                </div>
+                            </div>
+                            <div class="app-card-footer">
+                                <button class="btn-detail" onclick="openDetail('carteira')">
+                                    Ver detalhes
+                                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="app-card reveal">
+                            <div class="app-top top-teal">🎧</div>
+                            <div class="app-body">
+                                <span class="app-tag">Entretenimento</span>
+                                <div class="app-name">PodCast Now</div>
+                                <p class="app-desc">Player de podcasts com download offline, velocidade ajustável e
+                                    recomendações por IA.</p>
+                                <div class="app-techs">
+                                    <span class="tech">AVFoundation</span><span class="tech">CoreML</span>
+                                    <span class="tech">Combine</span>
+                                </div>
+                            </div>
+                            <div class="app-card-footer">
+                                <button class="btn-detail" onclick="openDetail('podcast')">
+                                    Ver detalhes
+                                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="app-card reveal">
+                            <div class="app-top top-slate">📦</div>
+                            <div class="app-body">
+                                <span class="app-tag">Produtividade</span>
+                                <div class="app-name">TaskFlow</div>
+                                <p class="app-desc">Gerenciador de tarefas com widgets interativos e lembretes por
+                                    localização.</p>
+                                <div class="app-techs">
+                                    <span class="tech">WidgetKit</span><span class="tech">CoreLocation</span>
+                                    <span class="tech">UserNotifications</span>
+                                </div>
+                            </div>
+                            <div class="app-card-footer">
+                                <button class="btn-detail" onclick="openDetail('taskflow')">
+                                    Ver detalhes
+                                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="app-card reveal">
+                            <div class="app-top top-rose">🍽️</div>
+                            <div class="app-body">
+                                <span class="app-tag">Alimentação</span>
+                                <div class="app-name">ReceitaFácil</div>
+                                <p class="app-desc">Receitas por restrições alimentares com lista de compras automática e
+                                    modo cozinha.</p>
+                                <div class="app-techs">
+                                    <span class="tech">Vision</span><span class="tech">Firebase</span>
+                                    <span class="tech">SwiftUI</span>
+                                </div>
+                            </div>
+                            <div class="app-card-footer">
+                                <button class="btn-detail" onclick="openDetail('receita')">
+                                    Ver detalhes
+                                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="app-card reveal">
+                            <div class="app-top top-green">🌱</div>
+                            <div class="app-body">
+                                <span class="app-tag">Lifestyle</span>
+                                <div class="app-name">HábitOS</div>
+                                <p class="app-desc">Rastreador de hábitos com streaks, notificações inteligentes e análise
+                                    semanal.</p>
+                                <div class="app-techs">
+                                    <span class="tech">CoreData</span><span class="tech">StoreKit</span>
+                                    <span class="tech">SwiftUI</span>
+                                </div>
+                            </div>
+                            <div class="app-card-footer">
+                                <button class="btn-detail" onclick="openDetail('habitos')">
+                                    Ver detalhes
+                                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills">
+                <div class="container">
+                    <div class="reveal">
+                        <p class="section-pre">02 — Stack</p>
+                        <h2 class="section-title">Tecnologias & Ferramentas</h2>
+                    </div>
+                    <div class="skills-wrap">
+                        <div class="skill-pill reveal"><span class="skill-icon">🍎</span>
+                            <div>
+                                <div class="skill-name">Swift 5.9+</div>
+                                <div class="skill-desc">Linguagem principal</div>
+                            </div>
+                        </div>
+                        <div class="skill-pill reveal"><span class="skill-icon">🎨</span>
+                            <div>
+                                <div class="skill-name">SwiftUI</div>
+                                <div class="skill-desc">UI declarativa nativa</div>
+                            </div>
+                        </div>
+                        <div class="skill-pill reveal"><span class="skill-icon">⚙️</span>
+                            <div>
+                                <div class="skill-name">UIKit</div>
+                                <div class="skill-desc">Views programáticas</div>
+                            </div>
+                        </div>
+                        <div class="skill-pill reveal"><span class="skill-icon">🔄</span>
+                            <div>
+                                <div class="skill-name">Combine</div>
+                                <div class="skill-desc">Reatividade</div>
+                            </div>
+                        </div>
+                        <div class="skill-pill reveal"><span class="skill-icon">💾</span>
+                            <div>
+                                <div class="skill-name">CoreData</div>
+                                <div class="skill-desc">Persistência local</div>
+                            </div>
+                        </div>
+                        <div class="skill-pill reveal"><span class="skill-icon">☁️</span>
+                            <div>
+                                <div class="skill-name">CloudKit</div>
+                                <div class="skill-desc">Sync na nuvem</div>
+                            </div>
+                        </div>
+                        <div class="skill-pill reveal"><span class="skill-icon">🧪</span>
+                            <div>
+                                <div class="skill-name">XCTest</div>
+                                <div class="skill-desc">Testes unitários & UI</div>
+                            </div>
+                        </div>
+                        <div class="skill-pill reveal"><span class="skill-icon">🔧</span>
+                            <div>
+                                <div class="skill-name">Xcode</div>
+                                <div class="skill-desc">IDE & Instruments</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <div class="container">
+                    <div class="reveal">
+                        <p class="section-pre">03 — Contato</p>
+                        <h2 class="section-title">Vamos conversar?</h2>
+                        <p class="section-sub">Aberto a novos projetos, freelas e oportunidades em iOS.</p>
+                    </div>
+                    <div class="contact-layout">
+                        <div class="reveal">
+                            <div class="contact-links">
+                                <a href="https://www.linkedin.com/in/luizgbraganca/" target="_blank" class="c-link">
+                                    <div class="c-icon">💼</div>
+                                    <div>
+                                        <div class="c-lbl">LinkedIn</div>
+                                        <div class="c-val">luizgbraganca</div>
+                                    </div>
+                                    <span class="c-arrow">↗</span>
+                                </a>
+                                <a href="https://github.com/Luizgustavo358" target="_blank" class="c-link">
+                                    <div class="c-icon">🐙</div>
+                                    <div>
+                                        <div class="c-lbl">GitHub</div>
+                                        <div class="c-val">Luizgustavo358</div>
+                                    </div>
+                                    <span class="c-arrow">↗</span>
+                                </a>
+                                <a href="#" class="c-link" onclick="downloadCV(event)">
+                                    <div class="c-icon">📄</div>
+                                    <div>
+                                        <div class="c-lbl">Currículo</div>
+                                        <div class="c-val">Baixar PDF</div>
+                                    </div>
+                                    <span class="c-arrow">↓</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="reveal">
+                            <div class="form">
+                                <div><label class="f-label">Nome</label><input type="text" class="f-input"
+                                        placeholder="Seu nome" id="fName"></div>
+                                <div><label class="f-label">Email</label><input type="email" class="f-input"
+                                        placeholder="seu@email.com" id="fEmail"></div>
+                                <div><label class="f-label">Mensagem</label><textarea class="f-textarea"
+                                        placeholder="Olá Luiz, gostaria de..." id="fMsg"></textarea></div>
+                                <button class="f-btn" onclick="sendEmail()">Enviar Mensagem →</button>
+                                <div class="f-success" id="fSuccess">✓ Mensagem enviada com sucesso!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="f-copy">© 2025 Luiz Bragança <span>·</span> iOS Developer</div>
+                <div class="f-copy">Feito com <span>♥</span> em Swift & HTML</div>
+            </footer>
+        </div>
+
+        <!-- ========== DETAIL PAGE ========== -->
+        <div id="page-detail" class="page">
+            <div class="detail-nav-bar">
+                <button class="back-btn" onclick="goHome()">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                        <path d="M13 8H3M7 12l-4-4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    Voltar ao portfólio
+                </button>
+            </div>
+
+            <div class="detail-hero">
+                <div class="detail-icon" id="d-icon"></div>
+                <div class="detail-hero-info">
+                    <span class="detail-category" id="d-category"></span>
+                    <h1 class="detail-name" id="d-name"></h1>
+                    <p class="detail-tagline" id="d-tagline"></p>
+                </div>
+            </div>
+
+            <div class="detail-body">
+                <div>
+                    <div class="screenshots-area">
+                        <div class="screenshots-label">Screenshots</div>
+                        <div class="screenshots-grid" id="d-screenshots"></div>
+                    </div>
+                    <div class="detail-desc-block">
+                        <h3 class="detail-section-title">Sobre o app</h3>
+                        <p class="detail-text" id="d-about"></p>
+                        <h3 class="detail-section-title">Principais funcionalidades</h3>
+                        <p class="detail-text" id="d-features"></p>
+                        <h3 class="detail-section-title">Desafios técnicos</h3>
+                        <p class="detail-text" id="d-challenges"></p>
+                    </div>
+                </div>
+
+                <div class="detail-sidebar">
+                    <div class="sidebar-card">
+                        <div class="sidebar-card-title">Tecnologias</div>
+                        <div class="tech-list" id="d-techs"></div>
+                    </div>
+                    <div class="sidebar-card">
+                        <div class="sidebar-card-title">Links</div>
+                        <div class="detail-links" id="d-links"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./js/script.js"></script>
     </body>
+
 </html>
