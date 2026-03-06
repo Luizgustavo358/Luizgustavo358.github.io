@@ -109,9 +109,8 @@ const apps = {
             { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358/iOS-Swift-Course/tree/master/apps/ARDicee' }
         ],
         screenshots: [
-            './',
-            './',
-            './'
+            './ardicee/src/1.jpg',
+            './ardicee/src/2.jpg'
         ]
     },
     arRuler: {
