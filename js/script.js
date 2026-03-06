@@ -1,10 +1,10 @@
 // ── App data ──────────────────────────────────────────────
 const apps = {
     conversorCulinario: {
-        icon: '👨🏾‍🍳', 
-        iconBg: '#131a2e', 
+        icon: '👨🏾‍🍳',
+        iconBg: '#131a2e',
         category: 'Utilitário',
-        name: 'Conversor Culinário', 
+        name: 'Conversor Culinário',
         tagline: 'Converta facilmente entre diferentes unidades de medida de ingredientes.',
         about: 'O Conversor Culinário é um utilitário criado para ajudar chefs e entusiastas da culinária a converter entre diferentes unidades de medida de ingredientes. O app é simples e intuitivo, com uma interface amigável que permite ao usuário inserir o valor e a unidade de medida de um ingrediente, e obter o valor convertido para outra unidade.',
         features: '— Escolher dentre +25 ingredientes\n— Escolher dentre +10 unidades de medida\n— Converter entre as unidades de medida escolhidas',
@@ -156,7 +156,7 @@ const apps = {
     hackerNews: {
         icon: '👨🏾‍💻',
         iconBg: '',
-        category: '',
+        category: 'Notícias',
         name: 'Hacker News',
         tagline: '',
         about: '',
@@ -175,7 +175,7 @@ const apps = {
     tipsy: {
         icon: '🧾',
         iconBg: '',
-        category: '',
+        category: 'Calculadora',
         name: 'Tipsy',
         tagline: '',
         about: '',
@@ -281,8 +281,8 @@ function goHome() {
 
 function scrollToId(selector) {
     const el = document.getElementById(selector);
-    
-    if(el) {
+
+    if (el) {
         el.scrollIntoView({ behavior: 'smooth' });
     }
 }
@@ -316,7 +316,7 @@ function openDetail(id) {
     const ssEl = document.getElementById('d-screenshots');
     ssEl.innerHTML = [0, 1, 2].map(i => `
         <div class="screenshot-slot">
-            <img id="ss-img-${id}-${i}" src="${app.screenshots[i]}" alt="">
+            <img id="ss-img-${id}-${i}" src="${app.screenshots[i]}" alt="" onclick="abrirModal('${app.screenshots[i]}')">
         </div>
     `).join('');
 
@@ -342,42 +342,38 @@ requestAnimationFrame(() => requestAnimationFrame(() => {
     document.getElementById('page-home').classList.add('visible');
 }));
 
-// ── Photo upload ──────────────────────────────────────────
-function loadPhoto(event) {
-    const file = event.target.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = e => {
-        const img = document.getElementById('photoImg');
-        img.src = e.target.result; img.style.display = 'block';
-        document.getElementById('photoPlaceholder').style.display = 'none';
-    };
-    reader.readAsDataURL(file);
-}
-
 // ── Email ─────────────────────────────────────────────────
 function sendEmail() {
-    const name  = document.getElementById('fName').value.trim();
+    const name = document.getElementById('fName').value.trim();
     const email = document.getElementById('fEmail').value.trim();
-    const msg   = document.getElementById('fMsg').value.trim();
+    const msg = document.getElementById('fMsg').value.trim();
 
-    if (!name || !email || !msg) 
+    if (!name || !email || !msg)
         return;
 
     window.location.href = `mailto:luizgustavo358@icloud.com?subject=Portfólio - ${encodeURIComponent(name)}&body=${encodeURIComponent('Nome: ' + name + '\nEmail: ' + email + '\n\n' + msg)}`;
-    
+
     const s = document.getElementById('fSuccess');
     s.style.display = 'block';
-    
+
     setTimeout(() => s.style.display = 'none', 4000);
 }
 
 function downloadCV(e) {
     e.preventDefault();
-    
+
     const link = document.createElement('a');
 
     link.href = './src/CV_Luiz-Gustavo_PTBR.pdf';
     link.download = 'CV_Luiz-Gustavo_PTBR.pdf';
     link.click();
+}
+
+function abrirModal(img) {
+    document.getElementById('modal-img').src = img;
+    document.getElementById('modal').classList.add('ativo');
+}
+
+function fecharModal() {
+    document.getElementById('modal').classList.remove('ativo');
 }
