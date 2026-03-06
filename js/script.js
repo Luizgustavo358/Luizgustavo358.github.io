@@ -374,7 +374,9 @@ function sendEmail() {
 
 function downloadCV(e) {
     e.preventDefault();
+    
     const link = document.createElement('a');
+
     link.href = './src/CV_Luiz-Gustavo_PTBR.pdf';
     link.download = 'CV_Luiz-Gustavo_PTBR.pdf';
     link.click();
