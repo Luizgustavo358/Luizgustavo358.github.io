@@ -1,87 +1,232 @@
 // ── App data ──────────────────────────────────────────────
 const apps = {
     conversorCulinario: {
-        icon: '🍽️', iconBg: '#fff5e6', category: 'Utilitário',
-        name: 'Conversor Culinário', tagline: 'Converta facilmente entre diferentes unidades de medida de ingredientes.',
+        icon: '👨🏾‍🍳', 
+        iconBg: '#131a2e', 
+        category: 'Utilitário',
+        name: 'Conversor Culinário', 
+        tagline: 'Converta facilmente entre diferentes unidades de medida de ingredientes.',
         about: 'O Conversor Culinário é um utilitário criado para ajudar chefs e entusiastas da culinária a converter entre diferentes unidades de medida de ingredientes. O app é simples e intuitivo, com uma interface amigável que permite ao usuário inserir o valor e a unidade de medida de um ingrediente, e obter o valor convertido para outra unidade.',
-        features: '— Criação de planos de treino personalizados\n— Integração bidirecional com HealthKit\n— Gráficos de evolução semanal e mensal\n— Registro de séries, repetições e carga\n— Notificações inteligentes de descanso',
-        challenges: 'O maior desafio foi sincronizar os dados em tempo real com o HealthKit sem impactar a performance da UI, utilizando Combine para gerenciar fluxos assíncronos de forma reativa.',
-        techs: ['Swift', 'SwiftUI', 'HealthKit', 'CoreData', 'Combine', 'Charts'],
+        features: '— Escolher dentre +25 ingredientes\n— Escolher dentre +10 unidades de medida\n— Converter entre as unidades de medida escolhidas',
+        challenges: 'O maior desafio foi implementar a lógica de conversão entre as unidades de medida escolhidas, considerando as relações de conversão entre diferentes unidades de medida.',
+        techs: ['Swift', 'SwiftUI', 'Swift Testing'],
         links: [
-            { icon: '🛍️', label: 'App Store', url: '#' },
-            { icon: '🍽️', label: 'Página do Aplicativo', url: 'https://luizgustavo358.github.io/conversorculinario/' }
+            { icon: '', label: 'App Store', url: '#' },
+            { icon: '👨🏾‍🍳', label: 'Página do Aplicativo', url: 'https://luizgustavo358.github.io/conversorculinario/' }
+        ],
+        screenshots: [
+            './conversorculinario/src/1.png',
+            './conversorculinario/src/2.png',
+            './conversorculinario/src/4.png'
         ]
     },
-    fittrack: {
-        icon: '🏋️', iconBg: '#f0f5ff', category: 'Saúde & Fitness',
-        name: 'FitTrack', tagline: 'Rastreamento inteligente de treinos com planos personalizados e integração nativa com o HealthKit.',
-        about: 'FitTrack é um app de fitness criado para ajudar usuários a monitorar seus treinos de forma simples e eficiente. O app conecta-se ao HealthKit para ler e gravar dados de saúde, mantendo um histórico completo de atividades.',
-        features: '— Criação de planos de treino personalizados\n— Integração bidirecional com HealthKit\n— Gráficos de evolução semanal e mensal\n— Registro de séries, repetições e carga\n— Notificações inteligentes de descanso',
-        challenges: 'O maior desafio foi sincronizar os dados em tempo real com o HealthKit sem impactar a performance da UI, utilizando Combine para gerenciar fluxos assíncronos de forma reativa.',
-        techs: ['Swift', 'SwiftUI', 'HealthKit', 'CoreData', 'Combine', 'Charts'],
+    myFinances: {
+        icon: '💸',
+        iconBg: '#1c472dff',
+        category: 'Finanças',
+        name: 'My Finances',
+        tagline: 'Gestão financeira com dashboards interativos, categorização de gastos.',
+        about: 'O My Finances é uma aplicação de gestão financeira criada para ajudar os usuários a controlar seus gastos. O app é simples e intuitivo, com uma interface amigável que permite ao usuário registrar seus gastos por mês, categorizá-los e visualizá-los em um gráfico ou em um resumo por categoria em cada mês.',
+        features: '',
+        challenges: '',
+        techs: ['Swift', 'SwiftUI', 'Charts', 'SwiftData', 'Swift'],
         links: [
-            { icon: '🛍️', label: 'App Store', url: '#' },
-            { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358' }
+            { icon: '', label: 'App Store', url: '#' }
+        ],
+        screenshots: [
+            './',
+            './',
+            './'
         ]
     },
-    carteira: {
-        icon: '💸', iconBg: '#f5f0ff', category: 'Finanças',
-        name: 'Carteira Pro', tagline: 'Gestão financeira pessoal com dashboards interativos, categorização automática e metas de economia.',
-        about: 'Carteira Pro ajuda os usuários a controlar suas finanças pessoais de forma visual e intuitiva. Com categorização automática de despesas e gráficos em tempo real, o app torna simples entender para onde o dinheiro vai.',
-        features: '— Dashboard com resumo mensal interativo\n— Categorização automática de lançamentos\n— Metas de economia com progresso visual\n— Sincronização via CloudKit em múltiplos dispositivos\n— Exportação de relatórios em PDF',
-        challenges: 'Implementar o framework Charts do iOS 16 com animações fluidas e dados dinâmicos, mantendo performance mesmo com centenas de transações no CoreData.',
-        techs: ['Swift', 'SwiftUI', 'Charts', 'CloudKit', 'CoreData', 'StoreKit'],
+    magicPaper: {
+        icon: '📰',
+        iconBg: '#1c3e47ff',
+        category: 'Entretenimento',
+        name: 'MagicPaper',
+        tagline: '',
+        about: '',
+        features: '',
+        challenges: '',
+        techs: ['Swift', 'Storyboard', 'ARKit', 'SceneKit', 'UIKit'],
         links: [
-            { icon: '🛍️', label: 'App Store', url: '#' },
-            { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358' }
+            { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358/iOS-Swift-Course/tree/master/apps/MagicPaper' }
+        ],
+        screenshots: [
+            './',
+            './',
+            './'
         ]
     },
-    podcast: {
-        icon: '🎧', iconBg: '#edfaf6', category: 'Entretenimento',
-        name: 'PodCast Now', tagline: 'Player de podcasts com download offline, velocidade ajustável e recomendações personalizadas por IA.',
-        about: 'PodCast Now é um player de podcasts com foco na experiência de escuta. O app utiliza CoreML para recomendar episódios com base no histórico e preferências do usuário, enquanto o AVFoundation gerencia a reprodução com alta fidelidade.',
-        features: '— Download de episódios para escuta offline\n— Velocidade de reprodução de 0.5x a 3x\n— Recomendações personalizadas via CoreML\n— Fila de reprodução inteligente\n— Widget na tela de bloqueio e Dynamic Island',
-        challenges: 'Treinar e integrar um modelo CoreML leve para recomendações sem sobrecarregar o dispositivo, além de gerenciar o cache de áudios com limite inteligente de armazenamento.',
-        techs: ['Swift', 'SwiftUI', 'AVFoundation', 'CoreML', 'Combine', 'WidgetKit'],
+    poke3D: {
+        icon: '🃏',
+        iconBg: '#4e5040ff',
+        category: 'Entretenimento',
+        name: 'Poke3D',
+        tagline: '',
+        about: '',
+        features: '',
+        challenges: '',
+        techs: ['Swift', 'Storyboard', 'ARKit', 'SceneKit', 'UIKit'],
         links: [
-            { icon: '🛍️', label: 'App Store', url: '#' },
-            { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358' }
+            { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358/iOS-Swift-Course/tree/master/apps/Poke3D' }
+        ],
+        screenshots: [
+            './',
+            './',
+            './'
         ]
     },
-    taskflow: {
-        icon: '📦', iconBg: '#f2f4f7', category: 'Produtividade',
-        name: 'TaskFlow', tagline: 'Gerenciador de tarefas com widgets interativos, lembretes por localização e modo foco.',
-        about: 'TaskFlow é um gerenciador de tarefas minimalista que utiliza geolocalização para lembretes contextuais — "lembre-me quando eu chegar no mercado". Widgets interativos permitem adicionar e marcar tarefas direto da tela inicial.',
-        features: '— Lembretes ativados por localização via CoreLocation\n— Widgets interativos com WidgetKit (iOS 17+)\n— Modo foco com integração ao Focus Filters da Apple\n— Organização por projetos e etiquetas\n— Sincronização com Reminders nativos',
-        challenges: 'Implementar widgets verdadeiramente interativos (AppIntents + WidgetKit no iOS 17) sem acessar o contexto principal do app, e garantir que os geofences funcionem com precisão em segundo plano.',
-        techs: ['Swift', 'SwiftUI', 'WidgetKit', 'AppIntents', 'CoreLocation', 'UserNotifications'],
+    clima: {
+        icon: '🌤️',
+        iconBg: '#606b29ff',
+        category: 'Previsão do Tempo',
+        name: 'Clima',
+        tagline: 'Previsão do tempo com dados recebidos da API OpenWeatherMap.',
+        about: '',
+        features: '',
+        challenges: '',
+        techs: ['Swift', 'UIKit', 'Storyboard', 'API REST', 'Core Location'],
         links: [
-            { icon: '🛍️', label: 'App Store', url: '#' },
-            { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358' }
+            { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358/iOS-Swift-Course/tree/master/apps/Clima' }
+        ],
+        screenshots: [
+            './',
+            './',
+            './'
         ]
     },
-    receita: {
-        icon: '🍽️', iconBg: '#fff2f5', category: 'Alimentação',
-        name: 'ReceitaFácil', tagline: 'Receitas personalizadas por restrições alimentares, com lista de compras automática e modo cozinha.',
-        about: 'ReceitaFácil usa a câmera do dispositivo para identificar ingredientes via Vision Framework e sugere receitas compatíveis com as restrições alimentares do usuário. O modo cozinha mantém a tela ativa e amplia o texto para facilitar o uso enquanto cozinha.',
-        features: '— Reconhecimento de ingredientes pela câmera (Vision)\n— Filtros por intolerâncias e dietas\n— Lista de compras gerada automaticamente\n— Modo cozinha com tela sempre ativa\n— Favoritos com sincronização Firebase',
-        challenges: 'Usar o Vision Framework para reconhecer alimentos em condições de iluminação variadas e integrar esse fluxo assíncrono com a UI de forma suave e sem travar.',
-        techs: ['Swift', 'SwiftUI', 'Vision', 'Firebase', 'Firestore', 'CoreML'],
+    arDicee: {
+        icon: '🎲',
+        iconBg: '#0E2016',
+        category: 'Entretenimento',
+        name: 'AR Dicee',
+        tagline: '',
+        about: '',
+        features: '',
+        challenges: '',
+        techs: [],
         links: [
-            { icon: '🛍️', label: 'App Store', url: '#' },
-            { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358' }
+            { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358/iOS-Swift-Course/tree/master/apps/ARDicee' }
+        ],
+        screenshots: [
+            './',
+            './',
+            './'
         ]
     },
-    habitos: {
-        icon: '🌱', iconBg: '#f0faf2', category: 'Lifestyle',
-        name: 'HábitOS', tagline: 'Rastreador de hábitos com streaks, notificações inteligentes e análise semanal de progresso.',
-        about: 'HábitOS ajuda usuários a construir e manter hábitos saudáveis através de um sistema de streaks gamificado. Notificações adaptativas aprendem o melhor horário para cada usuário com base no histórico de interações.',
-        features: '— Sistema de streaks com recompensas visuais\n— Notificações adaptativas por horário de uso\n— Análise semanal e mensal de consistência\n— Compras in-app via StoreKit 2\n— Widget de progresso diário',
-        challenges: 'Implementar o StoreKit 2 com suporte a assinaturas e compras únicas, gerenciando o estado de entitlement de forma confiável e validando localmente as transações.',
-        techs: ['Swift', 'SwiftUI', 'CoreData', 'StoreKit 2', 'UserNotifications', 'WidgetKit'],
+    arRuler: {
+        icon: '📏',
+        iconBg: '#0E2016',
+        category: 'Entretenimento',
+        name: 'AR Ruler',
+        tagline: 'Rastreador de distâncias com ARKit e SceneKit.',
+        about: '',
+        features: '',
+        challenges: '',
+        techs: ['Swift', 'Storyboard', 'ARKit', 'SceneKit', 'UIKit'],
         links: [
-            { icon: '🛍️', label: 'App Store', url: '#' },
-            { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358' }
+            { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358/iOS-Swift-Course/tree/master/apps/AR%20Ruler' }
+        ],
+        screenshots: [
+            './',
+            './',
+            './'
+        ]
+    },
+    gratefulMoments: {
+        icon: '🙏🏾',
+        iconBg: '#431f5bff',
+        category: 'Notas',
+        name: 'Grateful Moments',
+        tagline: 'Aplicativo para registrar momentos gratificantes e acompanhar o progresso.',
+        about: 'O Grateful Moments é um aplicativo de notas para registrar momentos gratificantes e acompanhar o progresso. O app é simples e intuitivo, com uma interface amigável que permite ao usuário registrar seus momentos gratificantes e visualizá-los.',
+        features: '-Badges\n-Criar momentos com fotos\n-Calculadora de sequências',
+        challenges: '',
+        techs: ['Swift', 'SwiftUI', 'SwiftData'],
+        links: [
+            { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358/GratefulMoments' }
+        ],
+        screenshots: [
+            './grateful/src/1.png',
+            './grateful/src/2.png',
+            './grateful/src/3.png'
+        ]
+    },
+    hackerNews: {
+        icon: '👨🏾‍💻',
+        iconBg: '',
+        category: '',
+        name: 'Hacker News',
+        tagline: '',
+        about: '',
+        features: '',
+        challenges: '',
+        techs: ['Swift', 'SwiftUI', 'WebKit', 'Combine'],
+        links: [
+            { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358/iOS-Swift-Course/tree/master/apps/HackerNews' }
+        ],
+        screenshots: [
+            './hackernews/src/1.jpg',
+            './hackernews/src/2.jpg',
+            './hackernews/src/3.jpg'
+        ]
+    },
+    tipsy: {
+        icon: '🧾',
+        iconBg: '',
+        category: '',
+        name: 'Tipsy',
+        tagline: '',
+        about: '',
+        features: '',
+        challenges: '',
+        techs: ['Swift', 'Storyboard', 'UIKit'],
+        links: [
+            { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358/iOS-Swift-Course/tree/master/apps/Tipsy' }
+        ],
+        screenshots: [
+            './',
+            './',
+            './'
+        ]
+    },
+    todoey: {
+        icon: '✅',
+        iconBg: '#431f5bff',
+        category: 'Lista',
+        name: 'Todoey',
+        tagline: 'Aplicativo de lista de tarefas com interface intuitiva.',
+        about: '',
+        features: '',
+        challenges: '',
+        techs: ['Swift', 'Storyboard', 'UIKit', 'Realm'],
+        links: [
+            { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358/iOS-Swift-Course/tree/master/apps/Todoey' }
+        ],
+        screenshots: [
+            './',
+            './',
+            './'
+        ]
+    },
+    calculatorApp: {
+        icon: '🧮',
+        iconBg: '#431f5bff',
+        category: 'Calculadora',
+        name: 'CalculatorApp',
+        tagline: 'Aplicativo de calculadora com interface intuitiva.',
+        about: '',
+        features: '',
+        challenges: '',
+        techs: ['Swift', 'SwiftUI'],
+        links: [
+            { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358/CalculatorApp/tree/main' }
+        ],
+        screenshots: [
+            './',
+            './',
+            './'
         ]
     }
 };
@@ -170,31 +315,12 @@ function openDetail(id) {
     // Screenshots (3 upload slots)
     const ssEl = document.getElementById('d-screenshots');
     ssEl.innerHTML = [0, 1, 2].map(i => `
-    <div class="screenshot-slot" onclick="document.getElementById('ss-${id}-${i}').click()">
-      <img id="ss-img-${id}-${i}" src="" alt="">
-      <div class="slot-add" id="ss-add-${id}-${i}">
-        <span class="slot-add-icon">＋</span>
-        <span class="slot-add-text">Screenshot ${i + 1}</span>
-      </div>
-      <input type="file" id="ss-${id}-${i}" accept="image/*" onchange="loadScreenshot(event,'${id}',${i})">
-    </div>
-  `).join('');
+        <div class="screenshot-slot">
+            <img id="ss-img-${id}-${i}" src="${app.screenshots[i]}" alt="">
+        </div>
+    `).join('');
 
     showPage('page-detail');
-}
-
-function loadScreenshot(event, appId, idx) {
-    const file = event.target.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = e => {
-        const img = document.getElementById(`ss-img-${appId}-${idx}`);
-        const add = document.getElementById(`ss-add-${appId}-${idx}`);
-        img.src = e.target.result;
-        img.style.display = 'block';
-        add.style.display = 'none';
-    };
-    reader.readAsDataURL(file);
 }
 
 // ── Reveal on scroll ──────────────────────────────────────
@@ -231,17 +357,25 @@ function loadPhoto(event) {
 
 // ── Email ─────────────────────────────────────────────────
 function sendEmail() {
-    const name = document.getElementById('fName').value.trim();
+    const name  = document.getElementById('fName').value.trim();
     const email = document.getElementById('fEmail').value.trim();
-    const msg = document.getElementById('fMsg').value.trim();
-    if (!name || !email || !msg) return;
-    window.location.href = `mailto:luizgbraganca@email.com?subject=Portfólio - ${encodeURIComponent(name)}&body=${encodeURIComponent('Nome: ' + name + '\nEmail: ' + email + '\n\n' + msg)}`;
+    const msg   = document.getElementById('fMsg').value.trim();
+
+    if (!name || !email || !msg) 
+        return;
+
+    window.location.href = `mailto:luizgustavo358@icloud.com?subject=Portfólio - ${encodeURIComponent(name)}&body=${encodeURIComponent('Nome: ' + name + '\nEmail: ' + email + '\n\n' + msg)}`;
+    
     const s = document.getElementById('fSuccess');
     s.style.display = 'block';
+    
     setTimeout(() => s.style.display = 'none', 4000);
 }
 
 function downloadCV(e) {
     e.preventDefault();
-    alert('Substitua esta função pelo link direto do seu currículo PDF.');
+    const link = document.createElement('a');
+    link.href = './src/CV_Luiz-Gustavo_PTBR.pdf';
+    link.download = 'CV_Luiz-Gustavo_PTBR.pdf';
+    link.click();
 }
