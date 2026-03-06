@@ -44,7 +44,7 @@ const apps = {
         iconBg: '#1c3e47ff',
         category: 'Entretenimento',
         name: 'MagicPaper',
-        tagline: 'Aplicativo inspirado no jornal do Harry Potter com som.',
+        tagline: 'Aplicativo inspirado no jornal do Harry Potter com som, para ver as aberturas de animes.',
         about: 'O MagicPaper é um aplicativo inspirado no jornal do Harry Potter, onde as imagens se movem, mas nele, é possível ver as músicas de introdução de alguns animes.',
         features: '- Reproduzir as músicas de introdução de animes',
         challenges: '- Procurar os vídeos de introdução de animes\n- Tirar foto das páginas da revista\n- Achar Vídeo com um tamanho específico',
@@ -100,11 +100,11 @@ const apps = {
         iconBg: '#0E2016',
         category: 'Entretenimento',
         name: 'AR Dicee',
-        tagline: '',
-        about: '',
-        features: '',
-        challenges: '',
-        techs: [],
+        tagline: 'Aplicativo para rolar dados com ARKit e SceneKit.',
+        about: 'O AR Dicee é um aplicativo que permite ao usuário adicionar dados virtuais na cena, rolar os dados e visualizar o resultado na tela.',
+        features: '- Adicionar dados virtuais na cena\n- Rolar os dados\n- Visualizar o resultado na tela',
+        challenges: 'Aprender a usar a ARKit e o SceneKit',
+        techs: ['Swift', 'Storyboard', 'ARKit', 'SceneKit', 'UIKit'],
         links: [
             { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358/iOS-Swift-Course/tree/master/apps/ARDicee' }
         ],
@@ -120,9 +120,9 @@ const apps = {
         category: 'Entretenimento',
         name: 'AR Ruler',
         tagline: 'Rastreador de distâncias com ARKit e SceneKit.',
-        about: '',
-        features: '',
-        challenges: '',
+        about: 'O AR Ruler é um aplicativo que rastreia a distância entre dois pontos usando a câmera do dispositivo. O app é simples e intuitivo, com uma interface amigável que permite ao usuário visualizar a distância entre dois pontos.',
+        features: '- Rastrear a distância entre dois pontos\n- Visualizar a distância entre dois pontos',
+        challenges: 'Aprender a usar a ARKit e o SceneKit',
         techs: ['Swift', 'Storyboard', 'ARKit', 'SceneKit', 'UIKit'],
         links: [
             { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358/iOS-Swift-Course/tree/master/apps/AR%20Ruler' }
@@ -141,7 +141,7 @@ const apps = {
         tagline: 'Aplicativo para registrar momentos gratificantes e acompanhar o progresso.',
         about: 'O Grateful Moments é um aplicativo de notas para registrar momentos gratificantes e acompanhar o progresso. O app é simples e intuitivo, com uma interface amigável que permite ao usuário registrar seus momentos gratificantes e visualizá-los.',
         features: '-Badges\n-Criar momentos com fotos\n-Calculadora de sequências',
-        challenges: '',
+        challenges: '- Aprender a usar o SwiftUI\n- Aprender a usar o SwiftData',
         techs: ['Swift', 'SwiftUI', 'SwiftData'],
         links: [
             { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358/GratefulMoments' }
@@ -154,13 +154,13 @@ const apps = {
     },
     hackerNews: {
         icon: '👨🏾‍💻',
-        iconBg: '',
+        iconBg: '#4e5040ff',
         category: 'Notícias',
         name: 'Hacker News',
-        tagline: '',
-        about: '',
-        features: '',
-        challenges: '',
+        tagline: 'Aplicativo de notícias com interface intuitiva.',
+        about: 'O Hacker News é um aplicativo de notícias com interface intuitiva. O app é simples e intuitivo, com uma interface amigável que permite ao usuário visualizar as notícias mais recentes do Hacker News.',
+        features: '- Visualizar as notícias mais recentes do Hacker News\n- Visualizar as notícias mais populares do Hacker News\n- Visualizar as notícias mais comentadas do Hacker News',
+        challenges: 'Aprender a abrir uma página da web dentro do aplicativo',
         techs: ['Swift', 'SwiftUI', 'WebKit', 'Combine'],
         links: [
             { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358/iOS-Swift-Course/tree/master/apps/HackerNews' }
@@ -173,21 +173,21 @@ const apps = {
     },
     tipsy: {
         icon: '🧾',
-        iconBg: '',
+        iconBg: '#431f5bff',
         category: 'Calculadora',
         name: 'Tipsy',
-        tagline: '',
-        about: '',
-        features: '',
-        challenges: '',
+        tagline: 'Aplicativo de calculadora de gorjeta com interface intuitiva.',
+        about: 'O Tipsy é um aplicativo de calculadora de gorjeta com interface intuitiva. O app é simples e intuitivo, com uma interface amigável que permite ao usuário calcular a gorjeta com base na conta, a porcentagem e na quantidade de pessoas.',
+        features: '- Calcular a gorjeta com base na conta, a porcentagem e na quantidade de pessoas\n- Visualizar o valor da gorjeta que cada pessoa terá que pagar',
+        challenges: '- Aprender a usar a navegação entre telas no Storyboard',
         techs: ['Swift', 'Storyboard', 'UIKit'],
         links: [
             { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358/iOS-Swift-Course/tree/master/apps/Tipsy' }
         ],
         screenshots: [
-            './',
-            './',
-            './'
+            './tipsy/src/1.png',
+            './tipsy/src/2.png',
+            './tipsy/src/3.png'
         ]
     },
     todoey: {
@@ -196,17 +196,17 @@ const apps = {
         category: 'Lista',
         name: 'Todoey',
         tagline: 'Aplicativo de lista de tarefas com interface intuitiva.',
-        about: '',
-        features: '',
-        challenges: '',
+        about: 'O Todoey é um aplicativo de lista de tarefas com interface intuitiva. O app é simples e intuitivo, com uma interface amigável que permite ao usuário adicionar, remover e marcar tarefas como concluídas.',
+        features: '- Adicionar categorias\n- Adicionar tarefas\n- Remover tarefas\n- Marcar tarefas como concluídas\n- Visualizar as tarefas não concluídas',
+        challenges: 'Aprender a usar o Realm para armazenar os dados',
         techs: ['Swift', 'Storyboard', 'UIKit', 'Realm'],
         links: [
             { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358/iOS-Swift-Course/tree/master/apps/Todoey' }
         ],
         screenshots: [
-            './',
-            './',
-            './'
+            './todoey/src/1.png',
+            './todoey/src/2.png',
+            './todoey/src/3.png'
         ]
     },
     calculatorApp: {
@@ -215,17 +215,16 @@ const apps = {
         category: 'Calculadora',
         name: 'CalculatorApp',
         tagline: 'Aplicativo de calculadora com interface intuitiva.',
-        about: '',
-        features: '',
-        challenges: '',
+        about: 'O CalculatorApp é um clone da calculadora do iOS. O app é simples e intuitivo, com uma interface amigável que permite ao usuário realizar cálculos básicos.',
+        features: '- Realizar cálculos básicos\n- Adicionar, subtrair, multiplicar e dividir\n- Visualizar o resultado do cálculo',
+        challenges: 'Aprender a usar o SwiftUI para criar a interface do app',
         techs: ['Swift', 'SwiftUI'],
         links: [
             { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358/CalculatorApp/tree/main' }
         ],
         screenshots: [
-            './',
-            './',
-            './'
+            './calculatorapp/src/1.png',
+            './calculatorapp/src/2.png'
         ]
     }
 };
