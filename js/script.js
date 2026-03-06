@@ -27,16 +27,16 @@ const apps = {
         name: 'My Finances',
         tagline: 'Gestão financeira com dashboards interativos, categorização de gastos.',
         about: 'O My Finances é uma aplicação de gestão financeira criada para ajudar os usuários a controlar seus gastos. O app é simples e intuitivo, com uma interface amigável que permite ao usuário registrar seus gastos por mês, categorizá-los e visualizá-los em um gráfico ou em um resumo por categoria em cada mês.',
-        features: '',
-        challenges: '',
+        features: '— Registrar gastos por mês\n— Categorizar gastos\n— Visualizar gastos por mês\n— Visualizar gastos por categoria em cada mês',
+        challenges: '- Aprender a usar o SwiftData para persistência de dados e Charts para visualização de dados',
         techs: ['Swift', 'SwiftUI', 'Charts', 'SwiftData', 'Swift'],
         links: [
             { icon: '', label: 'App Store', url: '#' }
         ],
         screenshots: [
-            './',
-            './',
-            './'
+            './myfinances/src/1.png',
+            './myfinances/src/2.png',
+            './myfinances/src/3.png'
         ]
     },
     magicPaper: {
@@ -44,10 +44,10 @@ const apps = {
         iconBg: '#1c3e47ff',
         category: 'Entretenimento',
         name: 'MagicPaper',
-        tagline: '',
-        about: '',
-        features: '',
-        challenges: '',
+        tagline: 'Aplicativo inspirado no jornal do Harry Potter com som.',
+        about: 'O MagicPaper é um aplicativo inspirado no jornal do Harry Potter, onde as imagens se movem, mas nele, é possível ver as músicas de introdução de alguns animes.',
+        features: '- Reproduzir as músicas de introdução de animes',
+        challenges: '- Procurar os vídeos de introdução de animes\n- Tirar foto das páginas da revista\n- Achar Vídeo com um tamanho específico',
         techs: ['Swift', 'Storyboard', 'ARKit', 'SceneKit', 'UIKit'],
         links: [
             { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358/iOS-Swift-Course/tree/master/apps/MagicPaper' }
@@ -63,18 +63,18 @@ const apps = {
         iconBg: '#4e5040ff',
         category: 'Entretenimento',
         name: 'Poke3D',
-        tagline: '',
-        about: '',
-        features: '',
-        challenges: '',
+        tagline: 'Aplicativo para ver os modelos 3D dos Pokemóns nas cartas.',
+        about: 'O Poke3D é um aplicativo que mostra os modelos 3D dos Pokemóns nas cartas. O app é simples e intuitivo, com uma interface amigável que permite ao usuário visualizar os modelos 3D dos Pokemóns nas cartas.',
+        features: '- Ver os modelos 3D dos Pokemóns nas cartas',
+        challenges: '- Achar os modelos 3D dos Pokemóns\n- Converter os modelos 3D para o formato que o Swift aceita\n- Integrar os modelos 3D na aplicação',
         techs: ['Swift', 'Storyboard', 'ARKit', 'SceneKit', 'UIKit'],
         links: [
             { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358/iOS-Swift-Course/tree/master/apps/Poke3D' }
         ],
         screenshots: [
-            './',
-            './',
-            './'
+            './poke3d/src/1.jpeg',
+            './poke3d/src/2.jpeg',
+            './poke3d/src/3.jpeg'
         ]
     },
     clima: {
@@ -83,17 +83,16 @@ const apps = {
         category: 'Previsão do Tempo',
         name: 'Clima',
         tagline: 'Previsão do tempo com dados recebidos da API OpenWeatherMap.',
-        about: '',
-        features: '',
-        challenges: '',
+        about: 'O Clima é uma aplicação que mostra a previsão do tempo para a cidade atual, com dados recebidos da API OpenWeatherMap. O app é simples e intuitivo, com uma interface amigável que permite ao usuário visualizar a previsão do tempo para a cidade procurada, bem como as condições climáticas atuais.',
+        features: '- Visualizar a previsão do tempo para a cidade atual\n- Visualizar as condições climáticas atuais',
+        challenges: '- Aprender a usar a API OpenWeatherMap\n- Aprender a usar o Core Location\n- Aprender a usar o JSON para manipulação de dados',
         techs: ['Swift', 'UIKit', 'Storyboard', 'API REST', 'Core Location'],
         links: [
             { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358/iOS-Swift-Course/tree/master/apps/Clima' }
         ],
         screenshots: [
-            './',
-            './',
-            './'
+            './clima/src/1.png',
+            './clima/src/2.png'
         ]
     },
     arDicee: {
@@ -167,9 +166,9 @@ const apps = {
             { icon: '🐙', label: 'GitHub', url: 'https://github.com/Luizgustavo358/iOS-Swift-Course/tree/master/apps/HackerNews' }
         ],
         screenshots: [
-            './hackernews/src/1.jpg',
-            './hackernews/src/2.jpg',
-            './hackernews/src/3.jpg'
+            './hackernews/src/1.png',
+            './hackernews/src/2.png',
+            './hackernews/src/3.png'
         ]
     },
     tipsy: {
@@ -314,9 +313,9 @@ function openDetail(id) {
 
     // Screenshots (3 upload slots)
     const ssEl = document.getElementById('d-screenshots');
-    ssEl.innerHTML = [0, 1, 2].map(i => `
+    ssEl.innerHTML = app.screenshots.map(i => `
         <div class="screenshot-slot">
-            <img id="ss-img-${id}-${i}" src="${app.screenshots[i]}" alt="" onclick="abrirModal('${app.screenshots[i]}')">
+            <img id="ss-img-${id}-${i}" src="${i}" alt="" onclick="abrirModal('${i}')">
         </div>
     `).join('');
 
