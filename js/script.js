@@ -234,7 +234,8 @@ function applyTheme(isDark) {
     const track = document.getElementById('themeToggle');
     const icon = document.getElementById('themeIcon');
     const label = document.getElementById('themeLabel');
-    if (isDark) {
+
+    if(isDark) {
         document.documentElement.classList.add('dark');
         thumb.style.transform = 'translateX(18px)';
         track.style.background = '#4d7fff';
@@ -248,11 +249,13 @@ function applyTheme(isDark) {
         label.textContent = 'Dark';
     }
 }
+
 function toggleTheme() {
     const isDark = !document.documentElement.classList.contains('dark');
     applyTheme(isDark);
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 }
+
 // Apply saved preference on load
 (function () {
     const saved = localStorage.getItem('theme');
@@ -265,6 +268,7 @@ function showPage(id) {
     document.querySelectorAll('.page').forEach(p => {
         p.classList.remove('active', 'visible');
     });
+
     const page = document.getElementById(id);
     page.classList.add('active');
     window.scrollTo(0, 0);
@@ -278,8 +282,13 @@ function goHome() {
 
 function scrollToId(selector) {
     const el = document.getElementById(selector);
-
-    if (el) {
+    const pageDetail = document.getElementById('page-detail');
+    
+    if(pageDetail.classList.contains('visible')) {
+        goHome();
+    }
+    
+    if(el) {
         el.scrollIntoView({ behavior: 'smooth' });
     }
 }
@@ -287,7 +296,10 @@ function scrollToId(selector) {
 // ── Open detail ───────────────────────────────────────────
 function openDetail(id) {
     const app = apps[id];
-    if (!app) return;
+
+    if(!app) {
+        return;
+    }
 
     document.getElementById('d-icon').textContent = app.icon;
     document.getElementById('d-icon').style.background = app.iconBg;
