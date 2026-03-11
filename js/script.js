@@ -11,7 +11,7 @@ const apps = {
         challenges: 'O maior desafio foi implementar a lógica de conversão entre as unidades de medida escolhidas, considerando as relações de conversão entre diferentes unidades de medida.',
         techs: ['Swift', 'SwiftUI', 'Swift Testing'],
         links: [
-            { icon: '', label: 'App Store', url: '#' },
+            { icon: '', label: 'App Store', url: 'https://apps.apple.com/br/app/conversorculinario/id6759982553' },
             { icon: '👨🏾‍🍳', label: 'Página do Aplicativo', url: 'https://luizgustavo358.github.io/conversorculinario/' }
         ],
         screenshots: [
